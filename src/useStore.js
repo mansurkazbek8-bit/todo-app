@@ -26,11 +26,11 @@ export function useStore() {
       title: data.title.trim(),
       date: data.date || '',
       time: data.time || '',
-      subtasks: (data.subtasks || []).filter(s => s.trim()).map(s => ({
-        id: generateId(),
-        text: s.trim(),
-        done: false,
-      })),
+     subtasks: (data.subtasks || []).filter(s => s.text?.trim()).map(s => ({
+  id: s.id || generateId(),
+  text: s.text.trim(),
+  done: s.done || false,
+})),
       done: false,
       createdAt: Date.now(),
     };
