@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=YS+Text:wght@400;500;600&family=YS+Display:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ya-red: #fc3f1d;
+  --ya-black: #1a1a1a;
+  --ya-dark: #21201f;
+  --ya-bg: #f5f5f5;
+  --ya-white: #ffffff;
+  --ya-gray-100: #f0f0f0;
+  --ya-gray-200: #e6e6e6;
+  --ya-gray-300: #d5d4d3;
+  --ya-gray-500: #999897;
+  --ya-gray-700: #6b6a69;
+  --ya-blue: #0078ff;
+  --ya-green: #1fb841;
+  --ya-orange: #ff8c00;
+  --ya-text: #21201f;
+  --ya-text-secondary: #6b6a69;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+  --transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--ya-bg);
+  color: var(--ya-text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--ya-gray-300); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ya-gray-500); }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  60% { transform: translateX(5px); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
